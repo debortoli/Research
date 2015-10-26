@@ -2,7 +2,7 @@ import numpy as np
 from numpy import *
 import cv2
 import time
-cap = cv2.VideoCapture('hall10.mp4')
+cap = cv2.VideoCapture('hallsmooth17.mp4')
 #think about setting the frame height and width before the processing
 out = cv2.VideoWriter('output5.avi',cv2.cv.CV_FOURCC('M','J','P','G'), 20.0, (720,576))
 
@@ -57,7 +57,6 @@ while(True):
     if good:
         print "GOOD"
         cv2.imshow("image", img)
-        
         out.write(img)
     else:
         print "BAD"
